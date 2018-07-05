@@ -18,7 +18,7 @@ from tflearn.layers.conv import conv_2d, max_pool_2d
 from tflearn.layers.core import input_data, dropout, fully_connected
 from tflearn.layers.estimator import regression
 
-
+# Change directory to where you downloaded the data.
 TRAIN_DIR = 'C:/Users/a/Desktop/Dogs Vs Cats/train'
 TEST_DIR = 'C:/Users/a/Desktop/Dogs Vs Cats/test'
 # This is what we're gonna resize all the images to.
@@ -76,7 +76,7 @@ def process_test_data():
     return testing_data
 
 # Run 'train_data = create_train_data()' only once or if you make changes to the data.
-# In any other case use this instead.
+# Otherwise, comment it out and use this to load the data much faster instead.
 train_data = np.load('train_data.npy')
 
 # Creating the CNN. First, the input layer.
